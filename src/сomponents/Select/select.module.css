@@ -1,0 +1,38 @@
+.select {
+    border: 2px solid black;
+    /*border-color: #282c34;*/
+    border-radius: 5px;
+    background-color: teal;
+    /*height: 100px;*/
+    width: 200px;
+}
+
+.select .main {
+    border: 2px solid black;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: teal;
+    /*width: 200px;*/
+    min-height: 30px;
+    min-width: 70px;
+}
+.items {
+    /*display: none;*/
+    /*position: absolute;*/
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.item.selected {
+    background-color: cadetblue;
+    color: wheat;
+}
+
+/*.select.active .items {*/
+/*    display: block;*/
+/*}*/
+/*.span {*/
+/*    border: 2px solid black*/
+
+/*}*/
