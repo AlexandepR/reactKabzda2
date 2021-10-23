@@ -19,6 +19,7 @@ import {WithoutValue} from './сomponents/Select/select'
 import UncontrolledAccordion from './сomponents/UnControlledAccordion/UnControlledAccordion';
 import {HelpsToReactMemo, LikeUseCallback} from "./stories/UseMemo";
 import {ExampleUseState} from "./stories/UseState";
+import {SimpleExample} from "./stories/UseEffect";
 
 
 const App = (props: any) => {
@@ -82,6 +83,7 @@ const App = (props: any) => {
             {/*<HelpsToReactMemo />*/}
             <LikeUseCallback />
             <ExampleUseState />
+            <SimpleExample />
         </div>
     )
 }
