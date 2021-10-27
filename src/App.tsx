@@ -81,8 +81,8 @@ const App = (props: any) => {
             {/*<OnOff on={SwitchOn} onChange={setSwitchOn}/>*/}
             {/*<UnControlledOnOff onChange={setSwitchOn}/> {SwitchOn.toString()}*/}
             {/*<HelpsToReactMemo />*/}
-            <LikeUseCallback />
-            <ExampleUseState />
+            {/*<LikeUseCallback />*/}
+            {/*<ExampleUseState />*/}
             <SimpleExample />
         </div>
     )
