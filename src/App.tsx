@@ -20,6 +20,7 @@ import UncontrolledAccordion from './сomponents/UnControlledAccordion/UnControl
 import {HelpsToReactMemo, LikeUseCallback} from "./stories/UseMemo";
 import {ExampleUseState} from "./stories/UseState";
 import {SimpleExample} from "./stories/UseEffect";
+import {Clock} from "./сomponents/Clock/Clock";
 
 
 const App = (props: any) => {
@@ -84,6 +85,7 @@ const App = (props: any) => {
             {/*<LikeUseCallback />*/}
             {/*<ExampleUseState />*/}
             <SimpleExample />
+            <Clock />
         </div>
     )
 }

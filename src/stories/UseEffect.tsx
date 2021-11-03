@@ -7,24 +7,23 @@ export default {
 export const SimpleExample = () => {
     const [sec, setSec] = useState(1)
     const [minutes, setMinutes] = useState(0)
+    const [hours,setHours] =useState(0)
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        let time = new Date()
+        // setInterval (() => {
+        //     console.log('tick')
+           //  let time = new Date()
+           //  let hours = time.getHours()
+           //  let minutes = time.getMinutes()
+           //  let seconds = time.getSeconds()
+           // setSec(seconds)
 
-        setInterval (() => {
-            console.log('tick')
-            // if ( sec <= 60 ) {
-            //     setSec((sate) => state + 1)
-            // }
-            // else if (sec >= 61) {
-            //     setSec(0)
-            // }
            // sec <= 60 ? setSec((state) => state + 1) : setMinutes((state) =>state + 1) ?
            //  sec >= 61 : setSec(0)
-        }, 1000)
-
-    },[sec])
+    //     }, 1000)
+    //
+    // },[sec])
 
     return <>
     Hello, sec: {sec} - minutes: {minutes}
