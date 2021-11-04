@@ -21,6 +21,7 @@ import {HelpsToReactMemo, LikeUseCallback} from "./stories/UseMemo";
 import {ExampleUseState} from "./stories/UseState";
 import {SimpleExample} from "./stories/UseEffect";
 import {Clock} from "./сomponents/Clock/Clock";
+import {ClockAnalog} from "./сomponents/Clock/ClockAnalog";
 
 
 const App = (props: any) => {
@@ -86,6 +87,7 @@ const App = (props: any) => {
             {/*<ExampleUseState />*/}
             <SimpleExample />
             <Clock />
+            <ClockAnalog />
         </div>
     )
 }

@@ -6,11 +6,15 @@ export const Clock = () => {
     const [date, setDate] = useState(new Date())
 
     useEffect( () => {
-        setInterval(() => {
+       const intervalId =  setInterval(() => {
+            console.log('Tick')
             setDate(new Date())
         },1000)
-    },[])
 
+    return () => {
+        clearInterval(intervalId)
+    }
+    },[])
 
     return <div>
         <span>{get2DidgitsString(date.getHours())}</span>

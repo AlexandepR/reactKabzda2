@@ -23,7 +23,7 @@ export const SimpleExample = () => {
            //  sec >= 61 : setSec(0)
     //     }, 1000)
     //
-    // },[sec])
+    // },[])
 
     return <>
     Hello, sec: {sec} - minutes: {minutes}
