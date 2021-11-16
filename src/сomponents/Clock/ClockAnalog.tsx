@@ -3,12 +3,13 @@ import {DigitalClockView} from "./DigitalClockView";
 import {AnalogClockView} from "./AnalogClockView";
 
 type PropsType = {
-    mode?: 'digital' | 'analog'
+    // mode?: 'digital' | 'analog'
+    mode: 'analog' | 'digital'
 }
 
 
 
-export const Clock: React.FC<PropsType> = (props) => {
+export const ClockTwo: React.FC<PropsType> = (props) => {
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {

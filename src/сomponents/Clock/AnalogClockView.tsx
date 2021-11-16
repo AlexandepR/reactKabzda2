@@ -1,19 +1,30 @@
 import {ClockViewPropsType} from "./ClockAnalog";
 import React from "react";
+import './AnalogClockView.css'
 
-const get2DidgitsString = (num: number) => num < 10 ? '0' + num : num
 
 export const AnalogClockView: React.FC<ClockViewPropsType> = ({date}) => {
+
+    const secondsStyle = {
+        transform: `rotate(${date.getSeconds() * 6}deg)`
+    };
+    const minutesStyle = {
+        transform: `rotate(${date.getMinutes() * 6}deg)`
+    };
+    const hoursStyle = {
+        transform: `rotate(${date.getHours() * 30}deg)`
+    };
+
     return (<>
             <div className={"clock"}>
-            <div className={"analog-clock"}>
-                <div className={"dial seconds"} />
-                <div className={"dial minutes"} />
-                <div className={"dial hours"} />
+                <div className={"analog-clock"}>
+                    <div className={"dial seconds"} style={secondsStyle}/>
+                    <div className={"dial minutes"} style={minutesStyle}/>
+                    <div className={"dial hours"} style={hoursStyle}/>
+                </div>
+                <div className={"digital-clock"}>
+                </div>
             </div>
-            <div className={"digital-clock"}>
-            </div>
-        </div>
         </>
     )
 }

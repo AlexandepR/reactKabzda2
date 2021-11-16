@@ -22,6 +22,7 @@ import {ExampleUseState} from "./stories/UseState";
 import {SimpleExample} from "./stories/UseEffect";
 import {Clock} from "./сomponents/Clock/Clock";
 import {ClockAnalogMy} from "./сomponents/Clock/ClockAnalogMy";
+import {ClockTwo} from "./сomponents/Clock/ClockAnalog";
 
 
 const App = (props: any) => {
@@ -87,6 +88,9 @@ const App = (props: any) => {
             {/*<ExampleUseState />*/}
             <SimpleExample />
             <Clock />
+            <ClockTwo
+            mode={'analog'}
+            />
             <ClockAnalogMy />
         </div>
     )
