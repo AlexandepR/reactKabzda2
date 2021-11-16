@@ -23,7 +23,7 @@ import {SimpleExample} from "./stories/UseEffect";
 import {Clock} from "./сomponents/Clock/Clock";
 import {ClockAnalogMy} from "./сomponents/Clock/ClockAnalogMy";
 import {ClockTwo} from "./сomponents/Clock/ClockAnalog";
-import {ResetEffectExample} from "./stories/UseEffect24";
+import {SetIntervalExample} from "./stories/UseEffect24";
 
 
 const App = (props: any) => {
@@ -90,8 +90,9 @@ const App = (props: any) => {
             <SimpleExample />
             {/*<Clock />*/}
             {/*<ClockTwo mode={'analog'} />*/}
-            <ResetEffectExample />
+            {/*<KeysTrackerExample />*/}
             <ClockAnalogMy />
+            <SetIntervalExample />
         </div>
     )
 }

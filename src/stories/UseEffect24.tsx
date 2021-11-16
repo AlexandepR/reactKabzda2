@@ -1,36 +1,62 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState} from 'react'
 
 
 
-export default {
-    title: 'useEffect demo'
-}
 
-export const KeysTrackerExample = () => {
-    const [text, setText] = useState('')
+export const SetIntervalExample = () => {
+    const [counter, setCounter] = useState('')
 
-    console.log('Component rendered with'  + text)
+    console.log('SetInterval')
 
-    useEffect(() => {
-        window.addEventListener('keypress', (e) => {
-            console.log(e.code)
-            setText((state) => state + e.code)
-        })
 
-        return () => {
-            console.log('RESET COMPONENT' + ' ' + text)
-        }
+        // useEffect(() => {
+            // const interval = setInterval(() => {
+            //     setCounter(state => state + 1)
+            // }, 1000)
 
-    }, [text]);
+            // return () => {
+            //     clearInterval(interval)
+            // }
+        // }, [])
 
-    const increase = () => {setText(text + 1)}
+        return <>
+            counter: {counter}
+        </>
+    }
 
-    return <>
-        Hello, counter: {text}
-        <button onClick={increase}>+</button>
-    </>
-}
 
+
+// RESET USE EFFECT
+// export default {
+//     title: 'useEffect demo'
+// }
+//
+// export const KeysTrackerExample = () => {
+//     const [text, setText] = useState('')
+//
+//     console.log('Component rendered with' + text)
+//
+//     useEffect(() => {
+//         const handler = (e: KeyboardEvent) => {
+//             setText(text + e.key)
+//         }
+//
+//         window.addEventListener('keypress', (e) => {
+//             console.log(e.code)
+//             setText(text + e.key)
+//         })
+//         window.addEventListener('keypress', handler)
+//
+//         return () => {
+//             window.removeEventListener('keypress', handler)
+//         }
+//     }, [text]);
+//
+//
+//     return <>
+//         Typed text: {text}
+//     </>
+// }
 
 
 // export default {
