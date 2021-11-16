@@ -1,44 +1,65 @@
-import React, {useEffect, useState} from "react";
-import style from './ClockAnalog.module.css'
+import {useEffect, useState} from "react";
 
-export const ClockAnalog = () => {
+type PropsType = {
+    mode?: 'digital' | 'analog'
+}
+
+const get2DidgitsString = (num: number) => num < 10 ? '0' + num : num
+
+export const Clock: React.FC<PropsType> = (props) => {
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {
-        const deg = 6;
-        const hr = document.querySelector('#hr');
-        const sc = document.querySelector('#sc');
-
-        setInterval(() => {
+        const intervalId = setInterval(() => {
+            console.log('Tick')
             setDate(new Date())
-            let hh = date.getHours() * 30;
-            let mm = date.getMinutes() * deg;
-            let ss = date.getSeconds() * deg;
         }, 1000)
+
+        return () => {
+            clearInterval(intervalId)
+        }
     }, [])
 
-    return (
-        <div className={style.body}>
-            <div className={style.clock}>
-                <div className={style.sec}>
-                    <div className={style.sc}>
-                        sec
-                    </div>
-                </div>
-            </div>
+    let view
+
+    switch (props.mode) {
+        case 'analog':
+            view = <span>ANALOG</span>
+            break;
+        case 'digital':
+        default:
+            view = <>
+                <span>{get2DidgitsString(date.getHours())}</span>
+                :
+                <span>{get2DidgitsString(date.getMinutes())}</span>
+                :
+                <span>{get2DidgitsString(date.getSeconds())}</span>
+            </>
+    }
+    return(
+        <div>
+            {view}
         </div>
     )
 }
 
-// const sc = document.querySelector('#sc');
-// sc.style.transform = `rotateZ(${ss}deg)`;
+type ClockViewPropsType = {
+    date: Date
+}
 
-// const deg = 6;
-// const hr = document.querySelector('#hr');
-//
-//
-//
-//     hr.style.transform = `rotateZ(${(hh) + (mm/12)}deg)`;
-//     mn.style.transform = `rotateZ(${mm}deg)`;
-//
-// })
+export const DigitalClockView: React.FC<ClockViewPropsType> = ({date}) => {
+    return (<>
+        <span>{get2DidgitsString(date.getHours())}</span>
+        :
+        <span>{get2DidgitsString(date.getMinutes())}</span>
+        :
+        <span>{get2DidgitsString(date.getSeconds())}</span>
+    </>)
+}
+
+export const AnalogClockView: React.FC<ClockViewPropsType> = ({date}) => {
+    return (<>
+
+        </>
+    )
+}
