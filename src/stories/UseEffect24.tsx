@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react'
+import UseEffect from "./UseEffect";
 
 
 
@@ -7,7 +8,6 @@ export const SetIntervalExample = () => {
     const [counter, setCounter] = useState('')
 
     console.log('SetInterval')
-
 
         // useEffect(() => {
             // const interval = setInterval(() => {
